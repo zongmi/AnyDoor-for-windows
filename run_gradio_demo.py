@@ -71,12 +71,12 @@ def inference_single_image(ref_image,
     hint = item['hint']
     num_samples = 1
 
-    control = torch.from_numpy(hint.copy()).float().cuda() 
+    control = torch.from_numpy(hint.copy()).float().cuda()
     control = torch.stack([control for _ in range(num_samples)], dim=0)
     control = einops.rearrange(control, 'b h w c -> b c h w').clone()
 
 
-    clip_input = torch.from_numpy(ref.copy()).float().cuda() 
+    clip_input = torch.from_numpy(ref.copy()).float().cuda()
     clip_input = torch.stack([clip_input for _ in range(num_samples)], dim=0)
     clip_input = einops.rearrange(clip_input, 'b h w c -> b c h w').clone()
 
@@ -276,4 +276,4 @@ with gr.Blocks() as demo:
                            outputs=[baseline_gallery]
                         )
 
-demo.launch(server_name="0.0.0.0")
+demo.launch(server_name="127.0.0.1",inbrowser=True)
