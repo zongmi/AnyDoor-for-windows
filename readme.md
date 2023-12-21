@@ -56,7 +56,15 @@ pip install pycocotools -i https://pypi.douban.com/simple
 pip install lvis
 ```
 
-## Installation for Windows
+## Automatic installation for Windows
+Clone this git:
+```bash
+git clone https://github.com/sdbds/AnyDoor-for-windows
+```
+Right click on `install.ps1` and Run with PowerShell.
+Run GUI with `run_gui.ps1`
+
+## Manual installation for Windows
 Open CMD and clone repository:
 ```bash
 git clone https://github.com/sdbds/AnyDoor-for-windows
