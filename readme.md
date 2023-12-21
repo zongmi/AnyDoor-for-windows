@@ -80,6 +80,9 @@ Install xformers for CUDA:
 ```bash
 pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu118
 ```
+
+Create `path` folder inside `AnyDoor-for-windows` folder, and download all models to the `path` folder!
+
 Run the demo GUI after venv has been activated:
 ```bash
 python run_gradio_demo.py
