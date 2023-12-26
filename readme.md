@@ -56,6 +56,47 @@ pip install pycocotools -i https://pypi.douban.com/simple
 
 pip install lvis
 ```
+
+## Automatic installation for Windows
+Clone this git:
+```bash
+git clone https://github.com/sdbds/AnyDoor-for-windows
+```
+Right click on `install.ps1` and Run with PowerShell.
+Run GUI with `run_gui.ps1`
+
+## Manual installation for Windows
+Open CMD and clone repository:
+```bash
+git clone https://github.com/sdbds/AnyDoor-for-windows
+```
+Create venv, activate it and upgrade pip:
+```bash
+cd AnyDoor-for-windows
+python -m venv venv
+venv\Scripts\Activate
+python.exe -m pip install --upgrade pip
+```
+Install requirements:
+```bash
+pip install -r requirements-windows.txt
+```
+Install torch with CUDA:
+```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+Install xformers for CUDA:
+```bash
+pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu118
+```
+
+Create `path` folder inside `AnyDoor-for-windows` folder, and download all models to the `path` folder!
+
+Run the demo GUI after venv has been activated:
+```bash
+python run_gradio_demo.py
+```
+
 ## Download Checkpoints
 Download AnyDoor checkpoint: 
 * [ModelScope](https://modelscope.cn/models/damo/AnyDoor/files)
